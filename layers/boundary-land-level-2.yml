@@ -1,0 +1,26 @@
+id: boundary-land-level-2
+type: line
+source: geolonia
+source-layer: boundary
+maxzoom: 6
+filter:
+  - all
+  - - ==
+    - - get
+      - admin_level
+    - 2
+  - - ==
+    - - has
+      - maritime
+    - false
+layout:
+  line-join: round
+  line-cap: round
+paint:
+  line-color: '#b5a898'
+  line-width:
+    stops:
+      - - 0
+        - 0.5
+      - - 6
+        - 2

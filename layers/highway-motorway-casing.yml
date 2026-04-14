@@ -1,0 +1,38 @@
+id: highway-motorway-casing
+type: line
+source: geolonia
+source-layer: transportation
+filter:
+  - all
+  - - ==
+    - $type
+    - LineString
+  - - '!in'
+    - brunnel
+    - bridge
+    - tunnel
+  - - ==
+    - class
+    - motorway
+layout:
+  line-cap: round
+  line-join: round
+paint:
+  line-color: '#d8cab5'
+  line-width:
+    - interpolate
+    - - exponential
+      - 0.9
+    - - zoom
+    - 5
+    - 0.4
+    - 6
+    - 0.4
+    - 14
+    - 3.5
+    - 16
+    - 12
+    - 18
+    - 20
+    - 20
+    - 140

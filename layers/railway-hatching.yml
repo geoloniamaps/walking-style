@@ -1,0 +1,26 @@
+id: railway-hatching
+type: line
+source: geolonia
+source-layer: transportation
+filter:
+  - all
+  - - ==
+    - class
+    - rail
+  - - '!has'
+    - service
+layout:
+  line-join: round
+paint:
+  line-color: '#c0b5a5'
+  line-dasharray:
+    - 0.2
+    - 8
+  line-width:
+    stops:
+      - - 10
+        - 3
+      - - 14
+        - 6
+      - - 18
+        - 10

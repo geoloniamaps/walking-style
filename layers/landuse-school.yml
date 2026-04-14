@@ -1,0 +1,11 @@
+id: landuse-school
+type: fill
+source: geolonia
+source-layer: landuse
+filter:
+  - ==
+  - class
+  - school
+paint:
+  fill-color: '#f0e6d0'
+  fill-opacity: 0.6

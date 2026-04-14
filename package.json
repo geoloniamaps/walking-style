@@ -1,0 +1,15 @@
+{
+  "name": "walking-style",
+  "version": "1.0.0",
+  "description": "歩行時に見やすい地図スタイル (Map style optimized for walking/pedestrian use)",
+  "main": "style.json",
+  "scripts": {
+    "start": "charites serve style.yml",
+    "build": "charites build style.yml ./docs/style.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@unvt/charites": "^2.0.0"
+  }
+}

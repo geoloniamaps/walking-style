@@ -1,0 +1,38 @@
+id: tunnel-casing
+type: line
+source: geolonia
+source-layer: transportation
+filter:
+  - all
+  - - ==
+    - brunnel
+    - tunnel
+  - - in
+    - class
+    - primary
+    - secondary
+    - tertiary
+    - trunk
+    - motorway
+layout:
+  line-join: round
+paint:
+  line-color: '#e0d8cc'
+  line-dasharray:
+    - 0.5
+    - 0.25
+  line-width:
+    - interpolate
+    - - exponential
+      - 0.9
+    - - zoom
+    - 6
+    - 0.4
+    - 12
+    - 1.2
+    - 14
+    - 3.5
+    - 16
+    - 12
+    - 18
+    - 20

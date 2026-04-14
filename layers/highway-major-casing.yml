@@ -1,0 +1,38 @@
+id: highway-major-casing
+type: line
+source: geolonia
+source-layer: transportation
+filter:
+  - all
+  - - '!in'
+    - brunnel
+    - bridge
+    - tunnel
+  - - in
+    - class
+    - primary
+    - secondary
+    - tertiary
+    - trunk
+layout:
+  line-cap: round
+  line-join: round
+paint:
+  line-color: '#ddd0be'
+  line-width:
+    - interpolate
+    - - exponential
+      - 0.9
+    - - zoom
+    - 6
+    - 0.4
+    - 12
+    - 1.2
+    - 14
+    - 3.5
+    - 16
+    - 12
+    - 18
+    - 20
+    - 20
+    - 140

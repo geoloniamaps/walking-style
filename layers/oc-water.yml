@@ -1,0 +1,6 @@
+id: oc-water
+type: fill
+source: geolonia
+source-layer: oc-water
+paint:
+  fill-color: '#b8d9ee'

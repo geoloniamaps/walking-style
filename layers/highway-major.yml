@@ -1,0 +1,38 @@
+id: highway-major
+type: line
+source: geolonia
+source-layer: transportation
+filter:
+  - all
+  - - '!in'
+    - brunnel
+    - bridge
+    - tunnel
+  - - in
+    - class
+    - primary
+    - secondary
+    - tertiary
+    - trunk
+layout:
+  line-cap: round
+  line-join: round
+paint:
+  line-color: '#f0e8da'
+  line-width:
+    - interpolate
+    - - exponential
+      - 0.9
+    - - zoom
+    - 6
+    - 0.3
+    - 12
+    - 1
+    - 14
+    - 2.5
+    - 16
+    - 8
+    - 18
+    - 16
+    - 20
+    - 130
