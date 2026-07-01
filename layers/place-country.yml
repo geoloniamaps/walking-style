@@ -18,7 +18,20 @@ layout:
         - 18
   text-field: '{name}'
   text-max-width: 6
-  text-padding: 40
+  text-padding: 20
+  # 日本を最優先で配置し、隣国とのラベル衝突で日本が消えるのを防ぐ
+  symbol-sort-key:
+    - case
+    - - in
+      - - get
+        - name
+      - - literal
+        - ['日本', 'Japan']
+    - 0
+    - - coalesce
+      - - get
+        - rank
+      - 100
 paint:
   text-color: '#4a3a28'
   text-halo-width: 2
